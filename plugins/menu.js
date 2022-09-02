@@ -33,24 +33,28 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-╭─「 %me 🤖」
-│ 👋🏻 Hai, %name!
+┌─「 %me 」──⬣
+│⬡ Hai, %name!
 │
-│ 🧱 Limit : *%limit Limit*
-│ 🦸🏼‍♂️ Role : *%role*
-│ 🔼 Level : *%level (%exp / %maxexp)*
-│ 💫 Total XP : %totalexp ✨
+│⬡ *Tersisa* : %limit Limit
+│⬡ *Role* : %role
+│⬡ *Level* : %level (%exp / %maxexp)
+│⬡ *Total XP* : %totalexp
 │ 
-│ 📅 Tanggal: *%week, %date*
-│ 🕰️ Waktu: *%time*
+│⬡ *Tanggal* : %week, %date
+│⬡ *Waktu* : %time
+│⬡ *Server* : Panel/RDP
+│⬡ *Version* : Bailyes Multi Device
 │
-│ 📈 Uptime: *%uptime (%muptime)*
-│ 📊 Database: %rtotalreg of %totalreg
-╰────
+│⬡ *Uptime* : %uptime (%muptime)
+│⬡ *Database* : %rtotalreg of %totalreg
+│⬡ *Storage Used* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
+│⬡ *Instagram* : https://instagram.com/nad_xxra
+└────────────────⬣
 %readmore`.trimStart(),
-  header: '╭─「 %category 」',
-  body: '│ • %cmd %islimit %isPremium',
-  footer: '╰────\n',
+  header: '┌─「 %category 」──⬣',
+  body: '│ ⬡ %cmd %islimit %isPremium',
+  footer: '└────────⬣\n',
   after: `
 *%npmname* | %version
 ${'```%npmdesc```'}
